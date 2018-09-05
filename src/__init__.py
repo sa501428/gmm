@@ -6,6 +6,6 @@ Date: Wednesday, May 23 2012
 """
 
 
-from normal import Normal
-from gmm import GMM, shownormal
+#from normal import Normal
+#from gmm import GMM, shownormal
 
