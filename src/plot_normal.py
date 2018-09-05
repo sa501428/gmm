@@ -126,8 +126,8 @@ def draw_slider_demo(norm):
         x = [cnorm.cond['data'], cnorm.cond['data']]
         l1.set_xdata(x)
         x,y = evalpdf(cnorm)
-        print cnorm
-        #print y
+        print(cnorm)
+        #print(y)
         l2.set_xdata(y)
         l2.set_ydata(x)
         pl.draw()
