@@ -20,4 +20,4 @@ def gencov(n):
     return C
 
 if __name__ == '__main__':
-    print gencov(2)
+    print(gencov(2))
