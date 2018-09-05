@@ -60,7 +60,8 @@ class GMM(object):
                     clusters[i].append(d)
 
                 for i in range(ncomps):
-                    print mus[i], clusters[i]
+                    print(mus[i])
+                    print(clusters[i])
                     self.comps.append(Normal(dim, mu = mus[i], sigma = np.cov(clusters[i], rowvar=0)))
 
                 self.priors = np.ones(ncomps, dtype="double") / np.array([len(c) for c in clusters])
@@ -79,7 +80,7 @@ class GMM(object):
                 self.priors = np.ones(ncomps, dtype="double") / np.array([len(c) for c in clusters])
 
             else:
-                raise ValueError, "Unknown method type!"
+                raise ValueError("Unknown method type!")
 
         else:
 
@@ -210,21 +211,21 @@ if __name__ == '__main__':
 
     # x = npr.randn(20, 2)
 
-    # print "No data"
+    # print("No data")
     # gmm = GMM(2,1,2) # possibly also broken
-    # print gmm
+    # print(gmm)
 
-    # print "Uniform"
+    # print("Uniform")
     # gmm = GMM(2,1,2,data = x, method = "uniform")
-    # print gmm
+    # print(gmm)
 
-    # print "Random"
+    # print("Random")
     # gmm = GMM(2,1,2,data = x, method = "random") # broken
-    # print gmm
+    # print(gmm)
 
-    # print "Kmeans"
+    # print("Kmeans")
     # gmm = GMM(2,1,2,data = x, method = "kmeans") # possibly broken
-    # print gmm
+    # print(gmm)
 
 
     x = np.arange(-10,30)
@@ -232,16 +233,16 @@ if __name__ == '__main__':
     y = x + npr.randn(40) # simple linear function
     #y = np.sin(x) + npr.randn(20)
     data = np.vstack([x,y]).T
-    print data.shape
+    print(data.shape)
 
 
     gmm = GMM(dim = 2, ncomps = 4,data = data, method = "random")
-    print gmm
+    print(gmm)
     shownormal(data,gmm)
 
     gmm.em(data,nsteps=1000)
     shownormal(data,gmm)
-    print gmm
+    print(gmm)
     ngmm = gmm.condition([0],[-3])
-    print ngmm.mean()
-    print ngmm.covariance()
+    print(ngmm.mean())
+    print(ngmm.covariance())
