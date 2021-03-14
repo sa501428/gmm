@@ -33,14 +33,14 @@ if True:
     draw2dnormal(x)
     pl.scatter(s[:,0],s[:,1])
     pl.show()
-    print s
+    print(s)
 
 if False:
     x = Normal(2,mu = np.array([0.1,0.7]), sigma = np.array([[ 0.6,  0.4], [ 0.4,  0.6]]))
     #draw2dnormal(x,show=True)
-    print x
+    print(x)
     new = x.condition([0],0.1)
-    print new
+    print(new)
 
 if False:
 
@@ -53,14 +53,14 @@ if False:
 
     x = Normal(5,mu = mu, sigma = S)
     newx = x.condition([0,1],np.array([0.1,0.3]))
-    print newx
+    print(newx)
 
     A = la.inv(S)
     newS = la.inv(A[2:,2:])
     newmu = mu[2:] - np.dot(np.dot(newS, A[2:,:2]), (np.array([0.1,0.3])- mu[:2]))
 
-    print newmu
-    print newS # should match above
+    print(newmu)
+    print(newS) # should match above
 
     
     

@@ -27,7 +27,7 @@ if False:
 
     #x = Normal(2, data=data)
     #draw2dnormal(x,show=True,axes=pl.gca())
-    print gmm
+    print(gmm)
     draw2dgmm(gmm)
     pl.show()
 
@@ -43,7 +43,7 @@ if False:
 
     draw2dgmm(gmm)
     pl.show()
-    #print data
+    #print(data)
     
 
 if True:
@@ -67,8 +67,8 @@ if True:
         ny.append(ngmm.mean()) 
 
     #ngmm = gmm.condition([0],[0.5])
-    #print ngmm.mean()
-    #print np.cos(0.5)
+    #print(ngmm.mean())
+    #print(np.cos(0.5))
     pl.plot(nx,ny,color='red')
     pl.show()
-    #print data
+    #print(data)

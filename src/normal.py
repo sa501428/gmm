@@ -45,7 +45,7 @@ class Normal(object):
         Examples
         --------
         >>> x = Normal(2,mu = np.array([0.1,0.7]), sigma = np.array([[ 0.6,  0.4], [ 0.4,  0.6]]))
-        >>> print x
+        >>> print(x)
         [ 0.1  0.7]
         [[ 0.6  0.4]
         [ 0.4  0.6]]
@@ -53,7 +53,7 @@ class Normal(object):
         To condition on a value (and index):
         
         >>> condx = x.condition([0],0.1)
-        >>> print condx
+        >>> print(condx)
         [ 0.7]
         [[ 0.33333333]]
         
@@ -93,13 +93,13 @@ class Normal(object):
         -------
 
         >>> x = Normal(2,mu = np.array([0.1,0.7]), sigma = np.array([[ 0.6,  0.4], [ 0.4,  0.6]]))
-        >>> print x
+        >>> print(x)
         [ 0.1  0.7]
         [[ 0.6  0.4]
         [ 0.4  0.6]]
 
         >>> x.update(np.array([0.0,0.0]), x.E)
-        >>> print x
+        >>> print(x)
         [ 0.0  0.0]
         [[ 0.6  0.4]
         [ 0.4  0.6]]
